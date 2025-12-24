@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a New Video Game
+        a(href="/") Return to the homepage
+        form(method="POST" action="/update-cobj")
+            div
+                label(for="name") Name:
+                input(type="text" id="name" name="name" required)
+            div
+                label(for="genre") Genre:
+                input(type="text" id="genre" name="genre" required)
+            div
+                label(for="release_year") Release Year:
+                input(type="number" id="release_year" name="release_year" required)
+            div
+                button(type="submit") Add Video Game
